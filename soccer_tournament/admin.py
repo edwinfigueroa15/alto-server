@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Team, Matches
+from soccer_tournament.models.team import Team
+from soccer_tournament.models.matches import Matches
 
 # Register your models here.
 admin.site.register([Team, Matches])

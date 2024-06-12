@@ -1,11 +1,6 @@
 from rest_framework.serializers import ModelSerializer
-from soccer_tournament.models import Team, Matches
-
-class TeamSerializer(ModelSerializer):
-    class Meta:
-        model = Team
-        fields = '__all__'
-
+from soccer_tournament.models.matches import Matches
+from .team_serializer import TeamSerializer
 
 class MatchesSerializer(ModelSerializer):
     class Meta:
