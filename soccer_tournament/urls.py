@@ -6,8 +6,8 @@ from soccer_tournament.views.team_views import TeamView
 from soccer_tournament.views.matches_views import MatchesView
 
 router = routers.DefaultRouter()
-router.register('team', TeamView, basename='team')
-router.register('matches', MatchesView, basename='matches')
+router.register(r'team', TeamView, basename='team')
+router.register(r'matches', MatchesView, basename='matches')
 
 urlpatterns = [
     path("", include(router.urls)),

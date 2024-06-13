@@ -3,8 +3,6 @@ from django.db import models
 
 class Team(models.Model):
     name = models.CharField(max_length=100, null=False, unique=True)
-    position = models.CharField(max_length=2, null=True)
-    points = models.CharField(max_length=3, null=True)
     matches_won = models.CharField(max_length=2, null=True)
     lost_matches = models.CharField(max_length=2, null=True)
     tied_matches = models.CharField(max_length=2, null=True)
@@ -16,4 +14,4 @@ class Team(models.Model):
         return self.name
     
     class Meta:
-        ordering = ['position']
+        ordering = ['id']
